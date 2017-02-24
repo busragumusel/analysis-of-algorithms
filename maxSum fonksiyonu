@@ -1,0 +1,20 @@
+def maxToplam1(vektor):
+maxToplam=0
+for i in range((len(vektor))):
+
+for j in range(i,len(vektor)):
+toplam=0
+
+for k in range (i,j):
+toplam=toplam+dizi[k]
+
+if (thisSum>maxSum):
+maxToplam=toplam
+return maxToplam
+
+dizi=[4, -3, 5, -2, -1, 2, 6,-2]
+
+print(maxToplam1(dizi))
+
+//1+( i-j )*1 olduğunda +1 ve *1' leri sabit olduğu için yok sayarız. 
+//i=0 dan i=n e kadarın toplamı + j=i den j=n kadar (k-i) nin toplamına bakarız ve karmaşıklığımız O(n³) olur.
