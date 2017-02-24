@@ -1,0 +1,30 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int kuvvetal(int a, int b){
+    int sum=1;
+    for(int i=0;i<b;i++){
+            sum=sum*a;
+    }
+    printf("sonuc= %d \n", sum);
+}
+
+int main(int argc, char *argv[])
+{
+    int a; 
+    int b;
+    printf("taban=");
+    scanf("%d",&a);
+    printf("us=");
+    scanf("%d",&b);
+    kuvvetal(a,b);
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
+
+//2+6*i+1+1
+//4+6*i 4 sabit bir sayi oldugu için onu yok sayıyoruz
+//Aradığımız karmasıklık i=0 dan i=b ye kadardır. O da sabit bir sayi çıkacağından karmaşıklığımız = O(n)
