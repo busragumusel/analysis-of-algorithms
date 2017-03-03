@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+long usalma(int a, int b){
+     if (b==0) return 1;
+     if (b==1) return a;
+     if(a%2==0){
+                   return usalma(a*a, b/2);
+     }
+     else{
+          return usalma(a*a, b/2)*a;
+     }     
+}
+         
+int main(int argc, char *argv[])
+{
+    printf("c=%d", usalma(2,8) );
+  
+  system("PAUSE");	
+  return 0;
+}
+
+//adım sayısına p diyelim, karmasiklik 2 üzeri p olur
+//N=(2 üzeri p) dersek, buradan da bu kodun karmaşıklığı O(logN) olur.
