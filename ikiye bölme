@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    int B[]={4,-3,2,1,6,-1,-2,4};
+    int eleman_sayisi=8;
+    int k,l;
+    for(k=0;k<(eleman_sayisi/2);k++){
+     printf("%d  ",A[k]);
+    }
+     printf("\n");
+    for(l=4;l<eleman_sayisi;l++){
+     printf("%d  ",A[l]);
+    }
+    
+  system("PAUSE");	
+  return 0;
+}
