@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    int B[]={-2,4,-3,2,1,6,-1,-2,4,2};
+    int eleman_sayisi=10;
+    int ilk_toplam=0;
+    int ikinci_toplam=0;
+    int yeni1=0;
+    int yeni2=0;
+    int k,l;
+    for(k=0;k<(eleman_sayisi/2);k++){
+     printf("%d  ",B[k]);
+     ilk_toplam=ilk_toplam+B[k];
+     if(yeni1>ilk_toplam) ilk_toplam=yeni1;
+    }
+    printf("\nEn buyuk ilk_toplam=%d  ",ilk_toplam);
+    printf("\n");
+    for(l=4;l<eleman_sayisi;l++){
+     printf("%d  ",B[l]);
+     ikinci_toplam=ikinci_toplam+B[l];
+     if(yeni2>ikinci_toplam) ikinci_toplam=yeni2;
+    }
+    printf("\nEn buyuk toplam2=%d  ",ikinci_toplam);
+
+  system("PAUSE");	
+  return 0;
+}
