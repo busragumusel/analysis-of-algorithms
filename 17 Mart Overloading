@@ -1,0 +1,59 @@
+#include <iostream>
+
+using namespace std;
+
+class myclass{
+    int arr[10];
+    int index;
+public:
+    myclass(){
+        index=0;
+    }
+    void add(int x);
+    void print();
+
+    myclass & operator=(myclass & x);
+    int getDiziEleman(int i);
+    int getIndex(){
+        return index;
+    };
+
+};
+
+void myclass::add(int x){
+    myclass::arr[index]=x;
+    myclass::index++;
+
+}
+
+void myclass::print(){
+    for(int i = 0; i < index; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+
+int myclass::getDiziEleman(int x){
+    return arr[x];
+}
+
+myclass & myclass::operator=(myclass & x){
+    for(int i=0; i< x.getIndex(); i++){
+        this->add(x.getDiziEleman(i));
+    }
+}
+
+int main()
+{
+    myclass a,b;
+
+    a.add(5);
+    a.add(10);
+    a.add(20);
+    a.add(30);
+    b=a;
+
+    b.print();
+
+    cout << "karmasiklik = " << "O(" << b.getIndex() << ") = O(n)" << endl; /* karmasiklik O(n)*/
+    return 0;
+}
