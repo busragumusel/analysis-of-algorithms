@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+     int a, b,c;
+     printf("ilk sayiyi gir:");
+     scanf("%d",&a);
+     printf("kuvveti gir:");
+     scanf("%d",&b);
+     c=us_alma(a,b);
+     printf("\nsonuc= %d\n",c);
+     system("PAUSE");	
+     return 0;
+}
+int us_alma(int a,int b){      //karmaşıklığı O(N)'dir
+    int i,sonuc=1;    
+    int sayac=0;       
+    if(b==0){
+             printf("Toplam carpma sayisi=%d",sayac);
+             return 1;
+    }if(a==0){
+             printf("Toplam carpma sayisi=%d",sayac);
+             return 0;
+    }for(i=1;i<=b;i++){                      
+         sonuc=sonuc*a;    
+         sayac++;                 
+    }printf("Toplam carpma sayisi=%d",sayac);
+    return sonuc;                                                             
+}
