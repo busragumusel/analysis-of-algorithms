@@ -1,0 +1,22 @@
+Soru 8:
+// Heap yapýsý  insert islemi için karmasiklik O(1)  arada bir deger olsaydi O(logN)
+// Base_case O(1) Worst_case O(logn)
+ 
+int heap[1000000], heapSize;
+
+void Init() {
+    heapSize = 0;
+    heap[0] = -INT_MAX;
+}
+ 
+void Insert(int element) {
+    heapSize++;
+    heap[heapSize] = element; 
+
+    int now = heapSize;
+    while (heap[now / 2] > element) {
+        heap[now] = heap[now / 2];
+        now /= 2;
+    }
+    heap[now] = element;
+}
