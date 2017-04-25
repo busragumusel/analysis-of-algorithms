@@ -1,0 +1,20 @@
+Soru 4:
+//3. Sorunun Base_case O(n) dir 
+//Bubble sort siralama mantigi ile elde etmek mümkündür çünkü liste eger sirali ise kasrmasiklik O(n) olur 
+
+void bubbleSort(int array[SIZE])
+{
+    int i,j,temp;
+    for(i=0;i<(SIZE-1);i++)
+    {
+        for(j=0;j<(SIZE-i-1);j++)
+        {
+            if (array[j]>array[j+1])
+            {
+                temp=array[j];
+                array[j]=array[j+1];
+                array[j+1]=temp;
+            }
+        }
+    }
+}
