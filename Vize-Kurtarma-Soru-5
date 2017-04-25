@@ -1,0 +1,26 @@
+Soru 5:
+#include <stdio.h>
+#include <stdlib.h>
+
+static int step=0;
+
+long powerLogN(int x,int n)     //Algoritmanin karmasikligi LogN dir reqursive power fonksiyonu
+{
+     step++;
+     if(n==0)
+        return 1;
+     if(n==1)
+        return x;
+     if(n%2==0)
+        return powerLogN(x*x,n/2);
+     else
+        return powerLogN(x*x,n/2)*x;
+}
+
+int main(int argc, char *argv[])
+{
+  printf("Result : %ld - Step: %d",powerLogN(2,4),step);
+
+  system("PAUSE");	
+  return 0;
+}
