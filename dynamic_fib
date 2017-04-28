@@ -1,0 +1,25 @@
+package javaapplication3;
+
+/**
+ *
+ * @author BM
+ */
+public class JavaApplication3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        System.out.println(dynamicfib(50));
+    }
+    public static long dynamicfib(int x) { //O(n)
+                long fib[] = new long[x + 1];
+                fib[0] = 0;
+                fib[1] = 1;
+                for (int i = 2; i < x + 1; i++) {
+                        fib[i] = fib[i - 1] + fib[i - 2];
+                }
+                return fib[x];
+        }
+}
